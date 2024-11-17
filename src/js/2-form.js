@@ -18,7 +18,6 @@ formInput.addEventListener("input", (event) => {
 
 const storedFormData = JSON.parse(localStorage.getItem(key));
 
-// console.log(storedFormData);
 
 
 if (storedFormData && storedFormData.email && storedFormData.message) {
@@ -33,8 +32,8 @@ formInput.addEventListener("submit", (event) => {
         alert("Fill please all fields");
         return;
     }
-    formData.email = storedFormData.email;
-    formData.message = storedFormData.message;
+       formData.email = formInput.elements.email.value.trim();
+       formData.message = formInput.elements.message.value.trim();
     console.log(formData);
     localStorage.clear();
     formData.email = "";
