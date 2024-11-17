@@ -21,10 +21,9 @@ const storedFormData = JSON.parse(localStorage.getItem(key));
 // console.log(storedFormData);
 
 
-if (storedFormData) { 
+if (storedFormData && storedFormData.email && storedFormData.message) {
     formInput.elements.email.value = storedFormData.email;
     formInput.elements.message.value = storedFormData.message;
-    
 }
 
 
