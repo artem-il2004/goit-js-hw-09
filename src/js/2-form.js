@@ -1,7 +1,7 @@
 const formData =
 {
     email: "",
-    message: ""
+    message: "",
 };
 const key = "feedback-form-state"; 
 
