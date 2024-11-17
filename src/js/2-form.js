@@ -21,25 +21,25 @@ const storedFormData = JSON.parse(localStorage.getItem(key));
 // console.log(storedFormData);
 
 
-if (storedFormData != []) { 
+if (storedFormData) { 
     formInput.elements.email.value = storedFormData.email;
     formInput.elements.message.value = storedFormData.message;
     
 }
 
 
-formInput.addEventListener("submit", (event) => { 
+formInput.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (formInput.elements.email.value === "" || formInput.elements.message.value === "") { 
+    if (formInput.elements.email.value === "" || formInput.elements.message.value === "") {
         alert("Fill please all fields");
         return;
     }
     formData.email = storedFormData.email;
     formData.message = storedFormData.message;
     console.log(formData);
-    localStorage.clear;
+    localStorage.clear();
     formData.email = "";
     formData.message = "";
     formInput.reset();
 
-})
+});
